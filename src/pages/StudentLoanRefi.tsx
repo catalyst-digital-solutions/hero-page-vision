@@ -5,6 +5,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  GraduationCap,
+  TrendingDown,
+  DollarSign,
+  Target,
+  Clock,
+  Users,
+  TrendingUp,
+  Check,
+  Shield,
+  Star,
+  Timer,
+  BarChart3,
+  CheckCircle,
+  AlertTriangle,
+  Briefcase,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 const AFFILIATE_LINK = "https://track.supermoney.com/aff_c?offer_id=1629&aff_id=2815";
 
@@ -31,8 +50,9 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-white">
-            <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              🎓 Mesa Group Consulting | Student Loan Refinancing
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <GraduationCap className="w-5 h-5" />
+              Mesa Group Consulting | Student Loan Refinancing
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -69,17 +89,27 @@ function HeroSection() {
               Compare Rates Now →
             </a>
 
-            <p className="text-sm text-white/80">
-              ✓ No impact to credit score &nbsp; | &nbsp; ✓ Takes 2 minutes &nbsp; | &nbsp; ✓ 100% free comparison
-            </p>
+            <div className="flex items-center gap-4 text-sm text-white/80">
+              <span className="flex items-center gap-1">
+                <Check className="w-4 h-4" /> No impact to credit score
+              </span>
+              <span className="flex items-center gap-1">
+                <Check className="w-4 h-4" /> Takes 2 minutes
+              </span>
+              <span className="flex items-center gap-1">
+                <Check className="w-4 h-4" /> 100% free comparison
+              </span>
+            </div>
 
             {/* Trust Badges */}
             <div className="flex gap-4 mt-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
-                🔒 SSL Secure
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm flex items-center gap-2">
+                <Shield className="w-4 h-4 text-[#f9c65d]" />
+                SSL Secure
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
-                ⭐ Trusted by Thousands
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm flex items-center gap-2">
+                <Star className="w-4 h-4 text-[#f9c65d]" />
+                Trusted by Thousands
               </div>
             </div>
           </div>
@@ -151,8 +181,8 @@ function WhatIsRefinancing() {
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">1️⃣</span>
+              <div className="w-16 h-16 bg-[#bb9446] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h4 className="font-bold text-lg mb-2 text-foreground">New Lender Pays Off Old Loans</h4>
               <p className="text-muted-foreground text-sm">
@@ -160,8 +190,8 @@ function WhatIsRefinancing() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">2️⃣</span>
+              <div className="w-16 h-16 bg-[#bb9446] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold text-white">2</span>
               </div>
               <h4 className="font-bold text-lg mb-2 text-foreground">You Get One New Loan</h4>
               <p className="text-muted-foreground text-sm">
@@ -169,8 +199,8 @@ function WhatIsRefinancing() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">3️⃣</span>
+              <div className="w-16 h-16 bg-[#bb9446] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold text-white">3</span>
               </div>
               <h4 className="font-bold text-lg mb-2 text-foreground">Start Saving Money</h4>
               <p className="text-muted-foreground text-sm">
@@ -198,40 +228,40 @@ function WhatIsRefinancing() {
 function SixBenefits() {
   const benefits = [
     {
-      icon: "📉",
+      icon: TrendingDown,
       title: "Lower Interest Rates",
       description: "Secure a competitive rate based on your current credit score and income—often significantly lower than your original student loan rates. Even a 1% reduction can save you thousands.",
-      color: "success",
+      color: "#f9c65d",
     },
     {
-      icon: "💰",
+      icon: DollarSign,
       title: "Reduced Monthly Payments",
       description: "Free up cash flow each month by extending your repayment term or lowering your interest rate. Use the extra money for savings, investing, or other financial goals.",
-      color: "accent",
+      color: "#bb9446",
     },
     {
-      icon: "🎯",
+      icon: Target,
       title: "Simplified Repayment",
       description: "Combine multiple student loans into one convenient monthly payment. No more juggling different due dates, servicers, or payment amounts.",
-      color: "primary",
+      color: "#f9c65d",
     },
     {
-      icon: "⏰",
+      icon: Clock,
       title: "Flexible Term Options",
       description: "Choose a repayment term that fits your budget—from 5 to 20 years. Shorter terms mean less interest paid overall; longer terms provide lower monthly payments.",
-      color: "warning",
+      color: "#f8d899",
     },
     {
-      icon: "👥",
+      icon: Users,
       title: "Remove a Cosigner",
       description: "If you had a cosigner on your original loans, refinancing in your name alone can release them from that obligation and give you full financial independence.",
-      color: "success",
+      color: "#bb9446",
     },
     {
-      icon: "🚀",
+      icon: TrendingUp,
       title: "Pay Off Debt Faster",
       description: "Lower rates mean more of your payment goes toward principal. You can become debt-free years earlier without increasing your monthly payment.",
-      color: "accent",
+      color: "#f9c65d",
     },
   ];
 
@@ -248,20 +278,24 @@ function SixBenefits() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className={`bg-card rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 border-t-4 border-${benefit.color}`}
-            >
-              <div className="text-5xl mb-4">{benefit.icon}</div>
-              <h3 className="text-2xl font-bold text-card-foreground mb-4">
-                {benefit.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
+          {benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon;
+            return (
+              <div
+                key={index}
+                className="bg-card rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 border-t-4"
+                style={{ borderTopColor: benefit.color }}
+              >
+                <IconComponent className="w-12 h-12 mb-4" style={{ color: benefit.color }} />
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="text-center mt-12">
@@ -285,25 +319,28 @@ function ThreeStepProcess() {
       number: 1,
       title: "Compare Your Options",
       description: "Answer a few quick questions about your loans, credit score, and income. Our comparison tool instantly shows you personalized rates from multiple top lenders—with no impact to your credit score.",
-      badge: "⏱️ Takes just 2 minutes",
+      badgeIcon: Timer,
+      badgeText: "Takes just 2 minutes",
       gradient: "from-primary to-accent",
-      badgeColor: "success",
+      badgeColor: "#f9c65d",
     },
     {
       number: 2,
       title: "Choose Your Best Offer",
       description: "Review offers side-by-side, comparing interest rates, monthly payments, and loan terms. Select the option that best fits your financial goals and budget.",
-      badge: "📊 Compare 10+ lenders",
+      badgeIcon: BarChart3,
+      badgeText: "Compare 10+ lenders",
       gradient: "from-accent to-success",
-      badgeColor: "warning",
+      badgeColor: "#f8d899",
     },
     {
       number: 3,
       title: "Complete Your Application",
       description: "Apply directly with your chosen lender. They'll verify your information, finalize your rate, and pay off your existing loans. You'll start making payments on your new, lower-cost loan.",
-      badge: "✅ Process complete in 2-4 weeks",
+      badgeIcon: CheckCircle,
+      badgeText: "Process complete in 2-4 weeks",
       gradient: "from-success to-success/90",
-      badgeColor: "primary",
+      badgeColor: "#bb9446",
     },
   ];
 
@@ -320,20 +357,27 @@ function ThreeStepProcess() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {steps.map((step) => (
-            <div key={step.number} className="relative">
-              <div className={`bg-gradient-to-br ${step.gradient} rounded-2xl p-8 text-white shadow-xl`}>
-                <div className={`absolute -top-6 left-8 w-12 h-12 bg-${step.badgeColor} rounded-full flex items-center justify-center text-2xl font-bold shadow-lg`}>
-                  {step.number}
-                </div>
-                <h3 className="text-2xl font-bold mb-4 mt-4">{step.title}</h3>
-                <p className="leading-relaxed mb-6">{step.description}</p>
-                <div className="text-sm bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                  {step.badge}
+          {steps.map((step) => {
+            const BadgeIcon = step.badgeIcon;
+            return (
+              <div key={step.number} className="relative">
+                <div className={`bg-gradient-to-br ${step.gradient} rounded-2xl p-8 text-white shadow-xl`}>
+                  <div 
+                    className="absolute -top-6 left-8 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold shadow-lg"
+                    style={{ backgroundColor: step.badgeColor }}
+                  >
+                    {step.number}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 mt-4">{step.title}</h3>
+                  <p className="leading-relaxed mb-6">{step.description}</p>
+                  <div className="text-sm bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center gap-2">
+                    <BadgeIcon className="w-4 h-4" />
+                    {step.badgeText}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="bg-secondary rounded-xl p-8 text-center">
@@ -360,32 +404,32 @@ function ThreeStepProcess() {
 function WhoShouldRefinance() {
   const criteria = [
     {
-      icon: "✓",
-      iconColor: "success",
+      icon: Check,
+      iconColor: "#f9c65d",
       title: "Good to Excellent Credit (650+)",
       description: "Your credit score significantly impacts the rates you'll qualify for. A score of 650 or higher typically unlocks competitive offers. The higher your score, the better your rate.",
     },
     {
-      icon: "✓",
-      iconColor: "accent",
+      icon: Check,
+      iconColor: "#bb9446",
       title: "Steady Income",
       description: "Lenders want to see reliable income that demonstrates your ability to repay. Full-time employment or consistent self-employment income qualifies.",
     },
     {
-      icon: "✓",
-      iconColor: "primary",
+      icon: Check,
+      iconColor: "#f9c65d",
       title: "High-Interest Private Loans",
       description: "If your current loans have rates above 6-7%, refinancing can lead to substantial savings. Private student loans are especially good candidates for refinancing.",
     },
     {
-      icon: "⚠️",
-      iconColor: "warning",
+      icon: AlertTriangle,
+      iconColor: "#f8d899",
       title: "Federal Loans You're Willing to Convert",
       description: "Federal loans come with unique protections (income-driven repayment, forgiveness programs). If you don't need these benefits, refinancing can save you money. Consider carefully before refinancing federal loans.",
     },
     {
-      icon: "✓",
-      iconColor: "success",
+      icon: Check,
+      iconColor: "#bb9446",
       title: "No Plans for Loan Forgiveness",
       description: "If you're pursuing Public Service Loan Forgiveness (PSLF) or other federal programs, keep federal loans separate and don't refinance them. Refinancing makes you ineligible for forgiveness.",
     },
@@ -404,21 +448,27 @@ function WhoShouldRefinance() {
         </div>
 
         <div className="space-y-6">
-          {criteria.map((item, index) => (
-            <div key={index} className="bg-card rounded-xl p-8 shadow-lg flex items-start gap-6">
-              <div className={`flex-shrink-0 w-12 h-12 bg-${item.iconColor} rounded-full flex items-center justify-center text-white text-2xl`}>
-                {item.icon}
+          {criteria.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <div key={index} className="bg-card rounded-xl p-8 shadow-lg flex items-start gap-6">
+                <div 
+                  className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white"
+                  style={{ backgroundColor: item.iconColor }}
+                >
+                  <IconComponent className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-card-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-12 bg-gradient-to-r from-primary to-accent rounded-xl p-8 text-center text-white">
@@ -445,7 +495,7 @@ function WhoShouldRefinance() {
 function SavingsExamples() {
   const examples = [
     {
-      icon: "🎓",
+      icon: GraduationCap,
       title: "Recent Graduate",
       originalLoan: "$50,000",
       originalRate: "6.8%",
@@ -453,11 +503,11 @@ function SavingsExamples() {
       term: "10 years",
       monthlySavings: "$142",
       totalSavings: "$17,040",
-      borderColor: "success",
-      bgColor: "success",
+      borderColor: "#f9c65d",
+      bgColor: "#f9c65d",
     },
     {
-      icon: "💼",
+      icon: Briefcase,
       title: "Established Professional",
       originalLoan: "$100,000",
       originalRate: "7.5%",
@@ -465,11 +515,11 @@ function SavingsExamples() {
       term: "15 years",
       monthlySavings: "$67",
       totalSavings: "$87,500",
-      borderColor: "accent",
-      bgColor: "accent",
+      borderColor: "#bb9446",
+      bgColor: "#bb9446",
     },
     {
-      icon: "🚀",
+      icon: TrendingUp,
       title: "Private Loan Holder",
       originalLoan: "$75,000",
       originalRate: "9.0%",
@@ -477,8 +527,8 @@ function SavingsExamples() {
       term: "15 years",
       monthlySavings: "$267",
       totalSavings: "$48,060",
-      borderColor: "primary",
-      bgColor: "primary",
+      borderColor: "#f9c65d",
+      bgColor: "#f9c65d",
     },
   ];
 
@@ -495,42 +545,52 @@ function SavingsExamples() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {examples.map((example, index) => (
-            <div key={index} className={`bg-gradient-to-br from-secondary to-background rounded-xl p-8 shadow-lg border-2 border-${example.borderColor}`}>
-              <div className="text-center mb-6">
-                <div className="text-5xl mb-2">{example.icon}</div>
-                <h3 className="text-xl font-bold text-foreground">
-                  {example.title}
-                </h3>
-              </div>
+          {examples.map((example, index) => {
+            const IconComponent = example.icon;
+            return (
+              <div 
+                key={index} 
+                className="bg-gradient-to-br from-secondary to-background rounded-xl p-8 shadow-lg border-2"
+                style={{ borderColor: example.borderColor }}
+              >
+                <div className="text-center mb-6">
+                  <IconComponent className="w-16 h-16 mx-auto mb-2" style={{ color: example.borderColor }} />
+                  <h3 className="text-xl font-bold text-foreground">
+                    {example.title}
+                  </h3>
+                </div>
 
-              <div className="space-y-4 mb-6">
-                <div className="flex justify-between pb-2 border-b border-border">
-                  <span className="text-muted-foreground">Original Loan:</span>
-                  <span className="font-bold">{example.originalLoan}</span>
+                <div className="space-y-4 mb-6">
+                  <div className="flex justify-between pb-2 border-b border-border">
+                    <span className="text-muted-foreground">Original Loan:</span>
+                    <span className="font-bold">{example.originalLoan}</span>
+                  </div>
+                  <div className="flex justify-between pb-2 border-b border-border">
+                    <span className="text-muted-foreground">Original Rate:</span>
+                    <span className="font-bold text-destructive">{example.originalRate}</span>
+                  </div>
+                  <div className="flex justify-between pb-2 border-b border-border">
+                    <span className="text-muted-foreground">New Rate:</span>
+                    <span className="font-bold text-success">{example.newRate}</span>
+                  </div>
+                  <div className="flex justify-between pb-2 border-b border-border">
+                    <span className="text-muted-foreground">Term:</span>
+                    <span className="font-bold">{example.term}</span>
+                  </div>
                 </div>
-                <div className="flex justify-between pb-2 border-b border-border">
-                  <span className="text-muted-foreground">Original Rate:</span>
-                  <span className="font-bold text-destructive">{example.originalRate}</span>
-                </div>
-                <div className="flex justify-between pb-2 border-b border-border">
-                  <span className="text-muted-foreground">New Rate:</span>
-                  <span className="font-bold text-success">{example.newRate}</span>
-                </div>
-                <div className="flex justify-between pb-2 border-b border-border">
-                  <span className="text-muted-foreground">Term:</span>
-                  <span className="font-bold">{example.term}</span>
-                </div>
-              </div>
 
-              <div className={`bg-${example.bgColor} text-white rounded-lg p-6 text-center`}>
-                <div className="text-sm mb-2">Monthly Savings</div>
-                <div className="text-3xl font-bold mb-4">{example.monthlySavings}</div>
-                <div className="text-sm mb-2">Total Savings</div>
-                <div className="text-3xl font-bold">{example.totalSavings}</div>
+                <div 
+                  className="text-white rounded-lg p-6 text-center"
+                  style={{ backgroundColor: example.bgColor }}
+                >
+                  <div className="text-sm mb-2">Monthly Savings</div>
+                  <div className="text-3xl font-bold mb-4">{example.monthlySavings}</div>
+                  <div className="text-sm mb-2">Total Savings</div>
+                  <div className="text-3xl font-bold">{example.totalSavings}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-12 text-center">
@@ -632,21 +692,15 @@ function FinalCTA() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white text-sm mb-8">
           <div className="flex items-center justify-center gap-2">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
+            <Shield className="w-5 h-5" />
             <span>SSL Secure</span>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
+            <Check className="w-5 h-5" />
             <span>Your information is safe</span>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
+            <BarChart3 className="w-5 h-5" />
             <span>Compare 10+ lenders</span>
           </div>
         </div>
@@ -672,11 +726,16 @@ function Footer() {
             <p className="text-sm text-gray-300 mb-4">
               Your trusted partner for credit repair and financial services in Bakersfield, CA.
             </p>
-            <p className="text-sm text-gray-300">
-              📍 5001 California Ave Suite 219<br />
-              Bakersfield, CA 93309<br />
-              📞 (661) 310-3040
-            </p>
+            <div className="text-sm text-gray-300 space-y-2">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 text-[#bb9446] flex-shrink-0" />
+                <span>5001 California Ave Suite 219<br />Bakersfield, CA 93309</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#bb9446] flex-shrink-0" />
+                <a href="tel:6613103040" className="hover:text-accent">(661) 310-3040</a>
+              </div>
+            </div>
           </div>
 
           {/* For Consumers */}
