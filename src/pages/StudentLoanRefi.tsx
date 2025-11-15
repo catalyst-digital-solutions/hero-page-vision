@@ -45,18 +45,18 @@ export default function StudentLoanRefi() {
 
 function HeroSection() {
   return (
-    <section className="bg-[#E5D2AF] py-20 px-6">
+    <section className="bg-background py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <GraduationCap className="w-5 h-5" />
+            <div className="inline-flex items-center gap-2 bg-white border border-border text-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-sm">
+              <Check className="w-5 h-5 text-success" />
               Mesa Group Consulting Student Loan Refinancing
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
-              Lower Your <span className="text-[#f9c65d]">Student Loan Payments</span> and Save <span className="text-[#f9c65d]">Thousands</span>
+              Lower Your <span className="text-primary">Student Loan Payments</span> and Save <span className="text-primary">Thousands</span>
             </h1>
 
             <p className="text-lg mb-8 leading-relaxed text-muted-foreground">
@@ -87,37 +87,39 @@ function HeroSection() {
               </div>
             </div>
 
-            {/* CTA Button */}
-            <a
-              href={AFFILIATE_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-success text-success-foreground text-xl font-bold px-12 py-5 rounded-lg hover:bg-success/90 transition-all duration-200 shadow-2xl hover:shadow-3xl hover:scale-105 mb-4"
-            >
-              Compare Rates Now →
-            </a>
-
-            <div className="flex items-center gap-4 text-sm text-white/80">
-              <span className="flex items-center gap-1">
-                <Check className="w-4 h-4" /> No impact to credit score
-              </span>
-              <span className="flex items-center gap-1">
-                <Check className="w-4 h-4" /> Takes 2 minutes
-              </span>
-              <span className="flex items-center gap-1">
-                <Check className="w-4 h-4" /> 100% free comparison
-              </span>
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 mb-6">
+              <a
+                href={AFFILIATE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary text-primary-foreground text-lg font-bold px-8 py-4 rounded-lg hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Compare Rates Now →
+              </a>
+              <a
+                href={AFFILIATE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white border-2 border-border text-foreground text-lg font-bold px-8 py-4 rounded-lg hover:bg-muted transition-all duration-200"
+              >
+                Learn More
+              </a>
             </div>
 
-            {/* Trust Badges */}
-            <div className="flex gap-4 mt-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm flex items-center gap-2">
-                <Shield className="w-4 h-4 text-[#f9c65d]" />
-                SSL Secure
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mt-8">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">$288</div>
+                <div className="text-sm text-muted-foreground">Avg Monthly Savings</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm flex items-center gap-2">
-                <Star className="w-4 h-4 text-[#f9c65d]" />
-                Trusted by Thousands
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">$10K+</div>
+                <div className="text-sm text-muted-foreground">Lifetime Savings</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">2 min</div>
+                <div className="text-sm text-muted-foreground">Application Time</div>
               </div>
             </div>
           </div>
