@@ -45,37 +45,45 @@ export default function StudentLoanRefi() {
 
 function HeroSection() {
   return (
-    <section className="bg-gradient-to-br from-primary via-accent to-primary py-20 px-6">
+    <section className="bg-[#E5D2AF] py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-white">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <GraduationCap className="w-5 h-5" />
-              Mesa Group Consulting | Student Loan Refinancing
+              Mesa Group Consulting Student Loan Refinancing
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Lower Your Student Loan Payments and Save Thousands
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
+              Lower Your <span className="text-[#f9c65d]">Student Loan Payments</span> and Save <span className="text-[#f9c65d]">Thousands</span>
             </h1>
 
-            <p className="text-xl mb-8 leading-relaxed text-white/90">
-              Refinance your student loans to secure a <strong>lower interest rate</strong>, reduce monthly payments, and pay off debt faster. Compare top lenders in minutes.
+            <p className="text-lg mb-8 leading-relaxed text-muted-foreground">
+              Refinance your student loans to secure a lower interest rate, reduce monthly payments, and pay off debt faster. Compare top lenders in minutes.
             </p>
 
-            {/* Stats Cards */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold mb-1">$288</div>
-                <div className="text-sm text-white/80">Avg Monthly Savings</div>
+            {/* Benefit List */}
+            <div className="space-y-3 mb-8">
+              <div className="flex items-center gap-2 text-foreground">
+                <Check className="w-5 h-5 text-success" />
+                <span>Lower interest rates save you thousands</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold mb-1">1-3%</div>
-                <div className="text-sm text-white/80">Rate Reduction</div>
+              <div className="flex items-center gap-2 text-foreground">
+                <Check className="w-5 h-5 text-success" />
+                <span>Reduce monthly payments immediately</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold mb-1">$10K+</div>
-                <div className="text-sm text-white/80">Lifetime Savings</div>
+              <div className="flex items-center gap-2 text-foreground">
+                <Check className="w-5 h-5 text-success" />
+                <span>12 months of expert support</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <Check className="w-5 h-5 text-success" />
+                <span>No impact to your credit score</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <Check className="w-5 h-5 text-success" />
+                <span>Compare top lenders in 2 minutes</span>
               </div>
             </div>
 
